@@ -1,23 +1,16 @@
-# ╔════════════════════════════════════════════════════════╗
-# ║               16-bit ALU in Logisim                   ║
-# ╚════════════════════════════════════════════════════════╝
-
 📘 DESCRIPTION
-This is a digital design of a 16-bit Arithmetic Logic Unit (ALU)
-created in Logisim. The ALU performs essential arithmetic and
-logic operations, useful in CPU and processor design courses.
+This is a digital design of a 16-bit Arithmetic Logic Unit (ALU) created in Logisim. The ALU performs essential arithmetic and logic operations, which are useful in CPU and processor design courses.
 
 ──────────────────────────────────────────────────────────────
 
 🧠 FEATURES
-├─✔ 16-bit wide inputs and output
-├─✔ Supports basic operations:
-│    ├─ ADD (A + B)
-│    ├─ SUB (A - B)
-│    ├─ AND, OR, XOR, NOT
-│    ├─ SHIFT LEFT/RIGHT
-│    └─ COMPARE (Zero, Carry, Overflow flags)
-└─✔ Flag outputs: Zero, CarryOut, Overflow
+16-bit wide inputs and outputs
+Supports basic operations:
+    1) ADD (A + B)
+    2) SUB (A - B)
+    3) AND, OR
+    4) COMPARE (Zero, Carry, Overflow flags)
+Flag outputs: Zero, Carry Out, Overflow
 
 ──────────────────────────────────────────────────────────────
 
@@ -30,7 +23,7 @@ logic operations, useful in CPU and processor design courses.
 • OUT[15:0] - Result of the selected operation
 • Zero      - High if OUT == 0
 • CarryOut  - Set if carry occurred
-• Overflow  - Set if result overflowed
+• Overflow  - Set if the result overflowed
 
 ──────────────────────────────────────────────────────────────
 
@@ -58,7 +51,8 @@ CarryIn   : 0
 Operation : 10 (ADD)
 ```
 
-```Result:
+```
+Result:
 00000001 00000011 (0x0103 = 259)
 Zero = 0
 Carry15 = 0
@@ -73,9 +67,12 @@ Overflow = 0
 Operand B: 10101010 11110000 (0xAAF0)
 Binvert   : 0 (ignored)
 CarryIn   : 0 (ignored)
-Operation : 00 (AND)```
+Operation : 00 (AND)
+```
 
-```10100000 10100000 (0xA0A0 = 41120)
+```
+Result:
+10100000 10100000 (0xA0A0 = 41120)
 Zero = 0
 Carry15 = 1 ✅
 Overflow = 0
@@ -93,6 +90,7 @@ Operation : 01 (OR)
 ```
 
 ```
+Result:
 00001111 11110000 (0x0FF0 = 4080)
 Zero = 0
 Carry15 = 0
@@ -111,6 +109,7 @@ Operation : 10 (A + ~B + 1 → A - B)
 ```
 
 ```
+Result:
 00000011 00000000 (0x0300 = 768)
 Zero = 0
 Carry15 = 0
