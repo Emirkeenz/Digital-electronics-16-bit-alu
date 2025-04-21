@@ -5,21 +5,29 @@ This is a digital design of a 16-bit Arithmetic Logic Unit (ALU) created in Logi
 
 🧠 FEATURES
 16-bit wide inputs and outputs
+
 Supports basic operations:
-    1) ADD (A + B)
-    2) SUB (A - B)
-    3) AND, OR
-    4) COMPARE (Zero, Carry, Overflow flags)
+1) ADD (A + B)
+
+2) SUB (A - B)
+
+3) AND, OR
+
+4) COMPARE (Zero, Carry, Overflow flags)
+
 Flag outputs: Zero, Carry Out, Overflow
 
 ──────────────────────────────────────────────────────────────
 
 📥 INPUTS
+
 • A[15:0]   - First operand
 • B[15:0]   - Second operand
 • OP[3:0]   - Operation selector (4-bit control)
 
+
 📤 OUTPUTS
+
 • OUT[15:0] - Result of the selected operation
 • Zero      - High if OUT == 0
 • CarryOut  - Set if carry occurred
